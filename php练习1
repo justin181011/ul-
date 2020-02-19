@@ -1,0 +1,134 @@
+<?php
+$Lower=3;
+$Upper=7;
+$q1=[10];
+for($i=0;$i<$Upper-$Lower+1;$i++)
+{
+    $q1[$i]=$Lower+$i;
+}
+
+for($i=$Lower;$i<=$Upper;$i++)
+{
+if ($i = 0.5 * ($Lower + $Upper)) {
+echo $i."\n";
+break;
+}
+}
+
+$i=$Lower;
+while($i!=0.5*($Lower+$Upper))
+{
+$i++;
+}
+echo $i."\n";
+
+$i=$Lower;
+do{
+
+$i++;
+}while($i!=0.5*($Lower+$Upper));
+echo $i."\n";
+
+
+for($i=$Lower;$i<=$Upper;$i++)
+{
+if ($i ==$Lower + 1) {
+echo $i."\n";
+break;
+}
+}
+
+$i=$Lower;
+while($i!=$Lower + 1)
+{
+$i++;
+}
+echo $i."\n";
+
+$i=$Lower;
+do{
+
+$i++;
+}while($i!=$Lower + 1);
+echo $i."\n";
+
+
+for($i=$Upper;$i>=$Lower;$i--)
+{
+if ($i ==$Upper-2) {
+echo $i."\n";
+echo '<br>';
+break;
+}
+}
+
+
+
+echo '<br>';
+$max=0;
+$q2=array("23"=>"Jim","16"=>"Fred","81"=>"Mary","14"=>"Susan","99"=>"Bart");
+foreach ($q2 as $x=>$x_value)
+{
+echo $x_value."\n";
+}
+
+echo '<br>';echo '<br>';
+$q3=$q2;
+krsort($q3);
+foreach ($q3 as $x=>$x_value)
+{
+    echo $x_value;
+    echo '<br>';
+    break;
+}
+
+echo '<br>';
+$q4=$q2;
+ksort($q4);
+foreach ($q4 as $x=>$x_value)
+{
+    echo $x_value;
+    echo '<br>';
+}
+
+echo '<br>';
+$q2_modify=array_flip($q2);
+
+foreach ($q2_modify as $x=>$x_value)
+{
+    $x_value+=10;
+    echo $x_value;
+    echo '<br>';
+}
+
+
+
+echo '<br>';
+function incr($q1)
+{
+    for($i=0;$i<count($q1);$i++)
+    {
+        $q1[$i]+=1;
+        echo $q1[$i]."\n";
+    }
+
+}
+
+echo '<br>';
+function incr2($q1)
+{
+    for ($i = 0; $i < count($q1); $i++) {
+        $q1[$i] += 5;
+        echo $q1[$i] . "\n";
+    }
+}
+
+echo '<br>';
+incr($q1);
+echo '<br>';
+incr2($q1);
+
+
+
+
+?>
